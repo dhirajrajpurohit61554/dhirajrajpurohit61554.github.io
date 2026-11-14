@@ -1,0 +1,130 @@
+.nav {
+   background-color: rgba(254, 86, 86, 0.397);
+   height: 50px;
+   /* display: flex;
+   justify-content: space-evenly;
+   align-items: center; */
+
+
+
+}
+
+a {
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+   font-size: large;
+   /* border: 2px solid black; */
+   transition: all 3ms ease-in;
+
+
+
+}
+
+a:hover {
+   font-size: 21px;
+   color: white;
+   transform: skew(12deg);
+}
+
+li {
+   list-style-type: none;
+   display: inline;
+
+
+}
+
+div {
+   background-color: aqua;
+   width: 100px;
+   height: 100px;
+   transition: all;
+   transition-duration: 2s;
+   transition-timing-function: ease-in;
+   position: absolute;
+   transition: all 90ms ease-in-out;
+   transform: rotate(180deg);
+   transform: scale;
+   animation-name: colorAnimate;
+   animation-duration: 0.7s;
+   animation-delay: 3s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   border-radius: 30%;
+   animation-direction: alternate;
+}
+
+
+
+@media(min-width:500px) {
+   div {
+      background-color: red;
+   }
+}
+
+@media(min-width:200px) and (max-width:600px) {
+   div {
+      background-color: blue;
+   }
+
+}
+
+div:hover {
+   background-color: blue;
+   color: rgb(255, 0, 0);
+   font-size: 23px;
+   transform: scale(2);
+   transform: rotate(90deg);
+   transform: translatey(80px);
+   transform: skew(7deg);
+
+}
+
+
+div:active {
+   background-color: brown;
+
+   @keyframes colorAnimate {
+      0% {
+         left: 0px;
+      }
+
+      50% {
+         background-color: rgb(0, 0, 0);
+      }
+
+      100% {
+         left: 300px;
+         background-color: brown;
+         font-size: 12px;
+      }
+   }
+
+}
+
+
+
+   #loader {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      border: 10px solid #fdf0d5;
+      border-left: 10px solid #003049;
+      animation-name: loader;
+      animation-duration: 1s;
+      animation-delay: 0;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+
+
+   }
+
+   @keyframes loader {
+      from {
+         transform: rotate(0deg);
+      }
+
+      to {
+         transform: rotate(360deg);
+      }
+   }
